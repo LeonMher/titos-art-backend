@@ -13,6 +13,12 @@ export class SelfService {
     return newProject.save();
   }
 
+  // uploadSelfImage(uloadedImage: UploadImageDto) {
+  //   const fileB64 = uloadedImage.buffer.toString('base64');
+  //   const newProject = new this.selfImageModel(fileB64);
+  //   return newProject.save();
+  // }
+
   getSelf() {
     return this.selfModel.findOne();
   }
