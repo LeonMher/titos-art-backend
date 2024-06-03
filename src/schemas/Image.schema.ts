@@ -5,7 +5,7 @@ export class ApiImage {
   // Created automatically, just needed for TS
   readonly _id: Schema.Types.ObjectId;
 
-  @prop({ required: true })
+  @prop({ required: false })
   name: string;
 
   @prop({ default: { data: null, contentType: null } })

@@ -10,7 +10,7 @@ export class ImageService {
     private readonly imageModel: ReturnModelType<typeof ApiImage>,
   ) {}
 
-  async create(file, createCatDto: { name: string; image_file: Buffer }) {
+  async create(file, createCatDto: { name?: string; image_file: Buffer }) {
     const newImage = await new this.imageModel(createCatDto);
     newImage.image_file.data = file.buffer;
     newImage.image_file.contentType = file.mimetype;
